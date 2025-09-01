@@ -1,0 +1,39 @@
+package Java.Guia1.ejercicios.practica1;
+
+import Java.Guia1.dominio.*;
+
+public class PracticaDeso1 {
+    public static void main(String[] args) {
+
+        // 1. Implementar main, imprimiendo “Hola mundo” por consola.
+
+        System.out.println("Hola mundo");
+
+        // 2. Instanciar 3 Pasajeros, incorporando la información correspondiente
+        // (nombre, dirección, etc).
+
+        Direccion d1 = new Direccion("Rivadavia 123", "Argentina", "Buenos Aires");
+        Direccion d2 = new Direccion("Ituzaingo 420", "Uruguay", "Montevideo");
+        Direccion d3 = new Direccion("Victoria 321", "Chile", "Valparaíso");
+
+        Pasajero p1 = new Pasajero("Juan", "Debona", d1);
+        Pasajero p2 = new Pasajero("Lucas", "Dominguez", d2);
+        Pasajero p3 = new Pasajero("Pedro", "Perez", d3);
+
+        // 4. Construir un array que contenga los 3 Pasajeros, y luego recorrerlo para
+        // imprimir el nombre y apellido de cada uno de ellos.
+
+        Pasajero vectorPasajero[] = { p1, p2, p3 };
+        for (int i = 0; i < vectorPasajero.length; i++) {
+            System.out.println(vectorPasajero[i].toString());
+        }
+
+        // 6. Instanciar 3 Habitaciones. 2 de un mismo tipo y 1 de un tipo diferente.
+        // Creando los enum (o clases) TipoHabitacion y enum EstadoHabitacion.
+
+        Habitacion h1 = new Habitacion(1, TipoHabitacion.DOBLE, EstadoHabitacion.DISPONIBLE, 100.0);
+        Habitacion h2 = new Habitacion(2, TipoHabitacion.DOBLE, EstadoHabitacion.NO_DISPONIBLE, 100.0);
+        Habitacion h3 = new Habitacion(3, TipoHabitacion.SUITE, EstadoHabitacion.DISPONIBLE, 300.0);
+
+    }
+}
