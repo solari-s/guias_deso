@@ -1,6 +1,7 @@
 package Java.Guia1.ejercicios.practica1;
 
 import Java.Guia1.dominio.*;
+import java.time.LocalDate;
 
 public class PracticaDeso1 {
     public static void main(String[] args) {
@@ -34,6 +35,14 @@ public class PracticaDeso1 {
         Habitacion h1 = new Habitacion(1, TipoHabitacion.DOBLE, EstadoHabitacion.DISPONIBLE, 100.0);
         Habitacion h2 = new Habitacion(2, TipoHabitacion.DOBLE, EstadoHabitacion.NO_DISPONIBLE, 100.0);
         Habitacion h3 = new Habitacion(3, TipoHabitacion.SUITE, EstadoHabitacion.DISPONIBLE, 300.0);
+
+        // 9. Crear dos objetos Reserva con Pasajero, Habitacion, fechaIngreso,
+        // fechaEgreso y probar el método previamente implementado.
+
+        Reserva r1 = new Reserva(p1, h1, LocalDate.of(25, 05, 11), LocalDate.of(25, 05, 22));
+        Reserva r2 = new Reserva(p2, h2, LocalDate.of(24, 02, 01), LocalDate.of(24, 03, 1));
+
+        System.out.println(h1.isDisponible(LocalDate.of(25, 05, 11), LocalDate.of(25, 05, 22)));
 
     }
 }
