@@ -44,5 +44,22 @@ public class PracticaDeso1 {
 
         System.out.println(h1.isDisponible(LocalDate.of(25, 05, 11), LocalDate.of(25, 05, 22)));
 
+        /*
+         * 11. Crear una clase abstracta Pago con el atributo importe y el método
+         * abstracto
+         * registrarPago(importe):
+         * ○ Crear 2 clases que hereden de Pago: Cheque y Efectivo.
+         * i. Al ejecutarse registrarPago en Cheque, se debe imprimir “Pago con cheque
+         * registrado”.
+         * ii. Al ejecutarse registrarPago en Efectivo, se debe imprimir “Efectivo
+         * procesado”
+         * ○ Instanciar objetos de cada clase concreta, crear una lista con los objetos,
+         * recorrerla
+         * con forEach y llamar al método registrarPago para ver qué ocurre.
+         * ○ Crear un objeto Cheque que modifique el comportamiento del método registrar
+         * pago,
+         * sin modificar la clase Cheque original.
+         */
+
     }
 }

@@ -63,11 +63,19 @@ public class Habitacion {
     // si la habitación no está reservada en esa fecha
 
     public boolean isDisponible(LocalDate fechaIngreso, LocalDate fechaEgreso) {
-        boolean reservada = true;
-        if (this.getReserva().getFechaIngreso() != fechaIngreso && this.getReserva().getFechaEgreso() != fechaEgreso) {
-            reservada = false;
+
+        boolean disponible = false;
+
+        if (this.reserva == null) {
+            disponible = true;
+        } else {
+            LocalDate ingresoActual = reserva.getFechaIngreso();
+            LocalDate egresoActual = reserva.getFechaEgreso();
+            disponible = fechaIngreso.isBefore(ingresoActual) || fechaEgreso.isAfter(egresoActual);
         }
-        return reservada;
+
+        return disponible;
+
     }
 
 }
